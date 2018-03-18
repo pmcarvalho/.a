@@ -13,3 +13,10 @@ isVowel c = elem (toLower(c)) "aeiou"
 addComma :: [String] -> [String]
 
 addComma s = map(\c -> c ++ ",")s
+-- 3. Crie uma função htmlListItems :: [String] -> [String], que receba uma lista de strings e retorne outra lista contendo as strings formatadas como itens de lista em HTML.
+
+
+
+htmlListItems :: [String] -> [String]
+
+htmlListItems s = map(\c -> "<LI>" ++ c ++ "</LI>")s
