@@ -16,7 +16,17 @@ addComma s = map(\c -> c ++ ",")s
 -- 3. Crie uma função htmlListItems :: [String] -> [String], que receba uma lista de strings e retorne outra lista contendo as strings formatadas como itens de lista em HTML.
 
 
+--lambda
 
 htmlListItems :: [String] -> [String]
 
 htmlListItems s = map(\c -> "<LI>" ++ c ++ "</LI>")s
+--aux
+htmlListlItems :: [String] -> [String]
+
+htmlListlItems s = map htmlListlAux s
+
+
+htmlListlAux :: String -> String
+
+htmlListlAux s = "<LI>" ++ s ++ "</LI>"
