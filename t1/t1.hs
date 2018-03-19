@@ -48,7 +48,7 @@ retiraVogais s = filter(isntVowel)s
 isntVowel :: Char -> Bool
 
 isntVowel c = notElem (toLower(c)) "aeiou"
---5. --5. Defina uma função que receba uma string, possivelmente contendo espaços, e que retorne outra string substituindo os demais caracteres por '-'.
+--5. Defina uma função que receba uma string, possivelmente contendo espaços, e que retorne outra string substituindo os demais caracteres por '-'.
 
 --lambda
 
@@ -66,3 +66,9 @@ substituiCaracteres s = map(substituiCaracteresAux)s
 substituiCaracteresAux :: Char -> Char
 
 substituiCaracteresAux c =  if c == ' ' then ' ' else '-'
+--6. Escreva uma função firstName :: String -> String que, dado o nome completo de uma pessoa, obtenha seu primeiro nome. Suponha que cada parte do nome seja separada por um espaço e que não existam espaços no início ou fim do nome.
+
+
+firstName :: String -> String
+
+firstName s = takeWhile(/= ' ')s
