@@ -89,4 +89,10 @@ lastName s = reverse( takeWhile (/= ' ') (reverse s) )
 userName :: String -> String
 
 userName s = map toLower ([head s] ++ (lastName s))
+--10. Crie uma função charFound :: Char -> String -> Bool que verifique se o caracter (primeiro argumento) está contido na string (segundo argumento).
+
+
+charFound :: Char -> String -> Bool
+
+charFound c s = elem c s
 
