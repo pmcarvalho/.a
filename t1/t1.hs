@@ -111,3 +111,25 @@ trocaChar c
 encodeName :: String -> String
 
 encodeName s = map (\c -> trocaChar c) s
+--11. Escreva uma função betterEncodeName :: String -> String que substitua vogais em uma string, conforme este esquema: a = 4, e = 3, i = 1, o = 0, u = 00.
+
+
+retrocaChar :: Char -> String
+retrocaChar c
+  
+| c == 'a' = "4"
+  
+| c == 'e' = "3"
+  
+| c == 'i' = "1"
+  
+| c == 'o' = "0"
+  
+| c == 'u' = "00"
+  
+| otherwise = [c]
+
+
+betterEncodeName :: String -> String
+
+betterEncodeName s = concatMap (\c -> retrocaChar c) s
