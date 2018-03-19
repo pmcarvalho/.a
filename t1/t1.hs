@@ -72,3 +72,10 @@ substituiCaracteresAux c =  if c == ' ' then ' ' else '-'
 firstName :: String -> String
 
 firstName s = takeWhile(/= ' ')s
+
+--7. Escreva uma função isInt :: String -> Bool que verifique se uma dada string só contém dígitos de 0 a 9.
+
+
+isInt :: String -> Bool
+
+isInt s = length(filter(\c-> c>'9' || c<'0')s) == 0
