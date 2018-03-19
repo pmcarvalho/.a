@@ -133,3 +133,20 @@ retrocaChar c
 betterEncodeName :: String -> String
 
 betterEncodeName s = concatMap (\c -> retrocaChar c) s
+--12. Dada uma lista de strings, produzir outra lista com strings de 10 caracteres, usando o seguinte esquema: strings de entrada com mais de 10 caracteres são truncadas, strings com até 10 caracteres são completadas com '.' até ficarem com 10 caracteres.
+
+
+ajeitaStrings :: String -> String
+
+ajeitaStrings s
+
+ | length s > 10 = take 10 s
+
+ | length s < 10 = ajeitaStrings (s ++ ".")
+
+ | otherwise = s
+
+a
+jeitaListas :: [String] -> [String]
+
+ajeitaListas l = map ajeitaStrings l
