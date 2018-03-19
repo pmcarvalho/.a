@@ -30,3 +30,21 @@ htmlListlItems s = map htmlListlAux s
 htmlListlAux :: String -> String
 
 htmlListlAux s = "<LI>" ++ s ++ "</LI>"
+--4. Defina uma função que receba uma string e produza outra retirando as vogais.
+
+
+--lambda
+retiraVogaisl :: String -> String
+
+retiraVogaisl s = filter(\c-> notElem (toLower(c)) "aeiou")s
+
+
+--aux
+retiraVogais :: String -> String
+
+retiraVogais s = filter(isntVowel)s
+
+
+isntVowel :: Char -> Bool
+
+isntVowel c = notElem (toLower(c)) "aeiou"
