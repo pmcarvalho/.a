@@ -79,3 +79,9 @@ firstName s = takeWhile(/= ' ')s
 isInt :: String -> Bool
 
 isInt s = length(filter(\c-> c>'9' || c<'0')s) == 0
+--8. Escreva uma função lastName :: String -> String que, dado o nome completo de uma pessoa, obtenha seu último sobrenome. Suponha que cada parte do nome seja separada por um espaço e que não existam espaços no início ou fim do nome.
+lastName :: String -> String
+
+lastName s = reverse( takeWhile (/= ' ') (reverse s) )
+
+
