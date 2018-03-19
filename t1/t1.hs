@@ -89,10 +89,25 @@ lastName s = reverse( takeWhile (/= ' ') (reverse s) )
 userName :: String -> String
 
 userName s = map toLower ([head s] ++ (lastName s))
---10. Crie uma função charFound :: Char -> String -> Bool que verifique se o caracter (primeiro argumento) está contido na string (segundo argumento).
+--10. Escreva uma função encodeName :: String -> String que substitua vogais em uma string, conforme o esquema a seguir: a = 4, e = 3, i = 2, o = 1, u = 0.
 
 
-charFound :: Char -> String -> Bool
+trocaChar :: Char -> Char
+trocaChar c
+  
+| c == 'a' = '4'
+  
+| c == 'e' = '3'
+  
+| c == 'i' = '2'
+  
+| c == 'o' = '1'
+  
+| c == 'u' = '0'
+  
+| otherwise = c
 
-charFound c s = elem c s
 
+encodeName :: String -> String
+
+encodeName s = map (\c -> trocaChar c) s
