@@ -48,3 +48,21 @@ retiraVogais s = filter(isntVowel)s
 isntVowel :: Char -> Bool
 
 isntVowel c = notElem (toLower(c)) "aeiou"
+--5. --5. Defina uma função que receba uma string, possivelmente contendo espaços, e que retorne outra string substituindo os demais caracteres por '-'.
+
+--lambda
+
+
+substituiCaracteresl :: String -> String
+
+substituiCaracteresl s = map(\c-> if c == ' ' then ' ' else '-')s
+
+
+--aux
+substituiCaracteres :: String -> String
+
+substituiCaracteres s = map(substituiCaracteresAux)s
+
+substituiCaracteresAux :: Char -> Char
+
+substituiCaracteresAux c =  if c == ' ' then ' ' else '-'
