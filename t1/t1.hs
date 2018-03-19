@@ -83,5 +83,10 @@ isInt s = length(filter(\c-> c>'9' || c<'0')s) == 0
 lastName :: String -> String
 
 lastName s = reverse( takeWhile (/= ' ') (reverse s) )
+--9. Escreva uma função userName :: String -> String que, dado o nome completo de uma pessoa, crie um nome de usuário (login) da pessoa, formado por: primeira letra do nome seguida do sobrenome, tudo em minúsculas. Dica: estude as funções pré-definidas no módulo Data.Char, para manipulação de maiúsculas e minúsculas.
 
+
+userName :: String -> String
+
+userName s = map toLower ([head s] ++ (lastName s))
 
